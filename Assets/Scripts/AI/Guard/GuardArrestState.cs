@@ -19,15 +19,16 @@ public class GuardArrestState : GuardBaseState
 
         int index = Random.Range(0, guard.guardArrestWaypoints.Length);
         selectedWaypoint = guard.guardArrestWaypoints[index];
-        
-       /* for(int i= 0; i <guard.guardArrestWaypoints.Length; i++)
-        {
-            currentWaypoint = guard.guardArrestWaypoints[i];
-            if(Vector3.Distance(currentWaypoint.position, guard.transform.position) < )
-            {
 
-            }
-        }*/
+        /* selectedWaypoint =
+         for(int i= 0; i <guard.guardArrestWaypoints.Length; i++)
+         {
+             currentWaypoint = guard.guardArrestWaypoints[i];
+             if(Vector3.Distance(currentWaypoint.position, guard.transform.position) < )
+             {
+
+             }
+         }*/
 
     }
 
