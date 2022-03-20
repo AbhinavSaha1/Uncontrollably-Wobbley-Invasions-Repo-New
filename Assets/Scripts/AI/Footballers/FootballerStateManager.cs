@@ -6,15 +6,17 @@ using UnityEngine.AI;
 public class FootballerStateManager : MonoBehaviour
 {
     public NavMeshAgent navAgent;
-    public float chaseRadius;
+    //public float chaseRadius;
     public float punchRadius;
+    public float changeStateDelay;
     public Transform[] wavePoints;
 
     public FootballerBaseState currentState;
     public FootballerBaseState IdleState = new FootballerIdleState();
-    //public FootballerBaseState WaitingState =
+    public FootballerBaseState WaitingState = new FootballerWaitState();
     public FootballerBaseState PanicState = new FootballerPanicState();
-    
+    public FootballerBaseState ChaseState = new FootballerChaseState();
+
     void Start()
     {
         currentState = IdleState;

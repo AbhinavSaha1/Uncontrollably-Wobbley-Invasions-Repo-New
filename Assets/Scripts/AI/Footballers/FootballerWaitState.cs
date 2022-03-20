@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FootballerIdleState : FootballerBaseState
+public class FootballerWaitState : FootballerBaseState
 {
     public override void EnterState(FootballerStateManager footballer)
     {
-        Debug.Log("Footballer in Idle state");
-        //stop nav mesh
+        Debug.Log("Footballer entered waiting state");
     }
 
     public override void OnTriggerEnter(FootballerStateManager footballer, Collider other)
@@ -17,6 +16,6 @@ public class FootballerIdleState : FootballerBaseState
 
     public override void UpdateState(FootballerStateManager footballer)
     {
-        //check condition for going into the next state
+        
     }
 }
