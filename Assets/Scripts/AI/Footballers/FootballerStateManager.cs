@@ -9,6 +9,7 @@ public class FootballerStateManager : MonoBehaviour
     //public float chaseRadius;
     public float punchRadius;
     public float changeStateDelay;
+    public PitchGuardActivator pitchGuardActivator;
     public Transform[] wavePoints;
 
     public FootballerBaseState currentState;

@@ -4,9 +4,41 @@ using UnityEngine;
 
 public class FootballerPanicState : FootballerBaseState
 {
+    Transform selectedWayPoint;
+    float previousWayPointIndex;
     public override void EnterState(FootballerStateManager footballer)
     {
         Debug.Log("Footballer entered panic state");
+        footballer.navAgent.isStopped = false;
+        
+        int index = Random.Range(0, footballer.wavePoints.Length);
+        previousWayPointIndex = index;
+        selectedWayPoint = footballer.wavePoints[index];
+    }
+    
+    public override void UpdateState(FootballerStateManager footballer)
+    {
+        //move nav mest to panic waypoints
+        if(selectedWayPoint != null)
+        {
+            footballer.navAgent.SetDestination(selectedWayPoint.position);
+
+            if(Vector3.Distance(footballer.transform.position, selectedWayPoint.position) < 1)
+            {
+                selectedWayPoint = null;
+            }
+        }
+        else if(selectedWayPoint == null)
+        {
+            int index = Random.Range(0, footballer.wavePoints.Length);
+           
+            if(previousWayPointIndex != index)
+            {
+                previousWayPointIndex = index;
+                selectedWayPoint = footballer.wavePoints[index];
+                Debug.Log("Setting a new waypoint");
+            }
+        }
     }
 
     public override void OnTriggerEnter(FootballerStateManager footballer, Collider other)
@@ -14,8 +46,4 @@ public class FootballerPanicState : FootballerBaseState
         //Chase the player: Call chase state
     }
 
-    public override void UpdateState(FootballerStateManager footballer)
-    {
-        //move nav mest to panic waypoints
-    }
 }
