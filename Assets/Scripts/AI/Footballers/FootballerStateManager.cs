@@ -10,6 +10,7 @@ public class FootballerStateManager : MonoBehaviour
     public float punchRadius;
     public float changeStateDelay;
     public PitchGuardActivator pitchGuardActivator;
+    public Transform playerTarget;
     public Transform[] wavePoints;
 
     public FootballerBaseState currentState;
@@ -32,6 +33,10 @@ public class FootballerStateManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         currentState.OnTriggerEnter(this, other);
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        currentState.OnTriggerExit(this, other);
     }
     public void SwitchState(FootballerBaseState state)
     {

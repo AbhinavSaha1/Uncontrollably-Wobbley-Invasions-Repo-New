@@ -11,11 +11,6 @@ public class FootballerIdleState : FootballerBaseState
         //stop nav mesh
     }
 
-    public override void OnTriggerEnter(FootballerStateManager footballer, Collider other)
-    {
-        
-    }
-
     public override void UpdateState(FootballerStateManager footballer)
     {
         //check condition for going into the next state
@@ -24,4 +19,15 @@ public class FootballerIdleState : FootballerBaseState
             footballer.SwitchState(footballer.WaitingState);
         }
     }
+
+    public override void OnTriggerEnter(FootballerStateManager footballer, Collider other)
+    {
+
+    }
+
+    public override void OnTriggerExit(FootballerStateManager footballer, Collider other)
+    {
+        throw new System.NotImplementedException();
+    }
+
 }
