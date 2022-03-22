@@ -44,7 +44,8 @@ public class FootballerPanicState : FootballerBaseState
     public override void OnTriggerEnter(FootballerStateManager footballer, Collider other)
     {
         //Chase the player: Call chase state
-        if(other.CompareTag("Player"))
+        Debug.Log(other.gameObject.name);
+        if(other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Changing from Panic to Switch state");
             footballer.SwitchState(footballer.ChaseState);

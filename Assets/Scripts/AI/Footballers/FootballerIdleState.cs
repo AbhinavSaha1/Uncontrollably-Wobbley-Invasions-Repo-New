@@ -17,6 +17,7 @@ public class FootballerIdleState : FootballerBaseState
         if (footballer.pitchGuardActivator.isInActivationZone)
         {
             footballer.SwitchState(footballer.WaitingState);
+            //footballer.navAgent.isStopped = false;
         }
     }
 
