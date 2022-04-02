@@ -13,6 +13,16 @@ public class PlayerController : MonoBehaviour
 	public Rigidbody hips;
 	public bool isGrounded;
 
+	private void Awake()
+	{
+		this._inputActions = new MainControls();
+	}
+
+	private void Start()
+	{
+		this.hips = this.GetComponent<Rigidbody>();
+	}
+
 	private void Update()
 	{
 		if (this._inputActions.Player.MoveMain.inProgress)
@@ -27,6 +37,19 @@ public class PlayerController : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		if (this._inputActions.Player.MoveMain.inProgress)
+		{
+			Vector3 right = this.hips.transform.right * this._moveMainDirection.x;
+			Vector3 forward = this.hips.transform.forward * this._moveMainDirection.y;
+
+			this.hips.AddForce(
+				force: new Vector3(
+					x: right.x + forward.x,
+					y: 0.0f,
+					z: right.z + forward.z
+				).normalized * this.speed
+			);
+		}
 		//if (Input.GetKey(KeyCode.W))
 		//{
 		//	this.animator.SetBool("isRunning", true);
@@ -67,19 +90,7 @@ public class PlayerController : MonoBehaviour
 		//	this.animator.SetBool("isSlideRight", false);
 		//}
 
-		if (this._inputActions.Player.MoveMain.inProgress)
-		{
-			Vector3 right = this.hips.transform.right * this._moveMainDirection.x;
-			Vector3 forward = this.hips.transform.forward * this._moveMainDirection.y;
 
-			this.hips.AddForce(
-				force: new Vector3(
-					x: right.x + forward.x,
-					y: 0.0f,
-					z: right.z + forward.z
-				).normalized * this.speed
-			);
-		}
 	}
 
 	private Vector2 _moveMainDirection;
@@ -110,15 +121,7 @@ public class PlayerController : MonoBehaviour
 
 	private MainControls _inputActions;
 
-	private void Awake()
-	{
-		this._inputActions = new MainControls();
-	}
-
-	private void Start()
-	{
-		this.hips = this.GetComponent<Rigidbody>();
-	}
+	
 	
 	private void OnEnable()
 	{

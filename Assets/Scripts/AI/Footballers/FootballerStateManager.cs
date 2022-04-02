@@ -18,6 +18,7 @@ public class FootballerStateManager : MonoBehaviour
     public FootballerBaseState WaitingState = new FootballerWaitState();
     public FootballerBaseState PanicState = new FootballerPanicState();
     public FootballerBaseState ChaseState = new FootballerChaseState();
+    public FootballerBaseState AttackState = new FootballerAttackState();
 
     void Start()
     {

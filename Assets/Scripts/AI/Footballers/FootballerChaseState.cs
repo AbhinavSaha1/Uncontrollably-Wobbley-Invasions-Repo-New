@@ -13,13 +13,16 @@ public class FootballerChaseState : FootballerBaseState
     {
         //set navmesh to the player
         footballer.navAgent.SetDestination(footballer.playerTarget.position);
-        //check if in punch radius
-        //if in punch radius: Either changes state to attack state or attack through here
+        if (Vector3.Distance(footballer.playerTarget.position, footballer.transform.position) < footballer.punchRadius)
+        {
+            Debug.Log("Changing state from Chase -> Attack");
+            footballer.SwitchState(footballer.AttackState);
+        }
     }
 
     public override void OnTriggerEnter(FootballerStateManager footballer, Collider other)
     {
-        
+       
     }
 
     public override void OnTriggerExit(FootballerStateManager footballer, Collider other)

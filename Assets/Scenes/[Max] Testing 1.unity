@@ -1745,8 +1745,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navAgent: {fileID: 1485029373}
-  punchRadius: 1
-  changeStateDelay: 0
+  punchRadius: 1.5
+  changeStateDelay: 0.5
   pitchGuardActivator: {fileID: 1199806566}
   playerTarget: {fileID: 367107261}
   wavePoints:
@@ -4736,8 +4736,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navAgent: {fileID: 93473969}
-  punchRadius: 1
-  changeStateDelay: 0
+  punchRadius: 1.5
+  changeStateDelay: 0.5
   pitchGuardActivator: {fileID: 1199806566}
   playerTarget: {fileID: 367107261}
   wavePoints:
@@ -5988,7 +5988,7 @@ PrefabInstance:
     - target: {fileID: 3529428602769590174, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3529428602769590174, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
