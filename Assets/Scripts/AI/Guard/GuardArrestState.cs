@@ -6,14 +6,14 @@ using UnityEngine;
 public class GuardArrestState : GuardBaseState
 {
     Transform selectedWaypoint;
-    float maxBreakForce;
+    float maxBreakForce = 8000;
     float breakForce;
     Transform currentWaypoint;
     Vector3 distance;
     public override void EnterState(GuardStateManager guard)
     {
         Debug.Log("Arresting the player");
-        breakForce = guard.playerHips.GetComponent<FixedJoint>().breakForce;
+        //breakForce = guard.playerHips.GetComponent<FixedJoint>().breakForce;
         if (guard.canGrab)
         {
             
@@ -74,14 +74,23 @@ public class GuardArrestState : GuardBaseState
         guard.canGrab = false;
         guard.playerHips.AddComponent<FixedJoint>();
         guard.playerHips.GetComponent<FixedJoint>().connectedBody = guard.gameObject.transform.parent.GetComponent<Rigidbody>();
-        breakForce = 4000;
+        guard.playerHips.GetComponent<FixedJoint>().breakForce = 5500;
+        guard.StartCoroutine(BreakforceIncreaseRoutine(guard));
     }
     IEnumerator BreakforceIncreaseRoutine(GuardStateManager guard)
     {
-       if (breakForce <= maxBreakForce)
-       {
-            breakForce += 50;
-       }
+        if (guard.playerHips.GetComponent<FixedJoint>() != null)
+        {
+            while (guard.playerHips.GetComponent<FixedJoint>().breakForce <= maxBreakForce)
+            {
+                Debug.Log("Entered breakforceincreas routine");
+                yield return new WaitForSeconds(1);
+
+                guard.playerHips.GetComponent<FixedJoint>().breakForce += 50;
+
+            }
+        }
+       
     }
-    
+            
 }

@@ -4792,7 +4792,7 @@ PrefabInstance:
     - target: {fileID: 3529428601736574488, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.072452486
+      value: -0.07245648
       objectReference: {fileID: 0}
     - target: {fileID: 3529428601736574488, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -4827,7 +4827,7 @@ PrefabInstance:
     - target: {fileID: 3529428601780269115, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.015819347
+      value: 0.015814811
       objectReference: {fileID: 0}
     - target: {fileID: 3529428601780269115, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -4847,7 +4847,7 @@ PrefabInstance:
     - target: {fileID: 3529428601807709270, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.052780196
+      value: -0.0527843
       objectReference: {fileID: 0}
     - target: {fileID: 3529428601807709270, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -4962,7 +4962,7 @@ PrefabInstance:
     - target: {fileID: 3529428602434587099, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.0406594
+      value: 0.040654864
       objectReference: {fileID: 0}
     - target: {fileID: 3529428602434587099, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -5117,7 +5117,7 @@ PrefabInstance:
     - target: {fileID: 3529428602917361581, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -17.88
+      value: 10.759998
       objectReference: {fileID: 0}
     - target: {fileID: 3529428602917361581, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -5167,7 +5167,7 @@ PrefabInstance:
     - target: {fileID: 3529428603075338505, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.013772287
+      value: 0.01376815
       objectReference: {fileID: 0}
     - target: {fileID: 3529428603075338505, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -5988,7 +5988,7 @@ PrefabInstance:
     - target: {fileID: 3529428602769590174, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3529428602769590174, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
