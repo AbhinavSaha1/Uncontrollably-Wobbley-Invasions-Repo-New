@@ -51,7 +51,8 @@ public class GuardArrestState : GuardBaseState
         {
             guard.jointBreakCheck.hasJointBroken = false;
             guard.isWaiting = true;
-            guard.SwitchState(guard.IdleState);
+            //PUT THE GUARD IN THE STUN STATE HERE
+            guard.SwitchState(guard.StunState);
 
             //guard.StartCoroutine(SwitchStateDelay(guard));
         }
@@ -74,7 +75,7 @@ public class GuardArrestState : GuardBaseState
         guard.canGrab = false;
         guard.playerHips.AddComponent<FixedJoint>();
         guard.playerHips.GetComponent<FixedJoint>().connectedBody = guard.gameObject.transform.parent.GetComponent<Rigidbody>();
-        guard.playerHips.GetComponent<FixedJoint>().breakForce = 5500;
+        guard.playerHips.GetComponent<FixedJoint>().breakForce = 4000;
         guard.StartCoroutine(BreakforceIncreaseRoutine(guard));
         BreakForceReduce(guard);
     }

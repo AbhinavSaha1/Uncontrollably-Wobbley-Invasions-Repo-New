@@ -13,7 +13,9 @@ public class GuardStateManager : MonoBehaviour
     public float guardArrestToChaseStageDelay;
     public bool canGrab;
     public bool isWaiting;
+    //public Item[] grabables;
     public Transform[] guardArrestWaypoints;
+    public Rigidbody[] bodyParts;
     public PitchGuardActivator pitchGuardActivator;
     public JointBreakCheck jointBreakCheck;
 
@@ -24,6 +26,8 @@ public class GuardStateManager : MonoBehaviour
     public GuardBaseState WaitingState = new GuardWaitingState();
     public GuardBaseState ChaseState = new GuardChaseState();
     public GuardBaseState ArrestState = new GuardArrestState();
+    public GuardBaseState StunState = new GuardStunState();
+
     void Start()
     {
         currentState = IdleState;
