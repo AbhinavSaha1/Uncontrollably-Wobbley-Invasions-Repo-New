@@ -28,7 +28,7 @@ public class FootballerIdleState : FootballerBaseState
 
     public override void OnTriggerExit(FootballerStateManager footballer, Collider other)
     {
-        throw new System.NotImplementedException();
+       
     }
 
 }

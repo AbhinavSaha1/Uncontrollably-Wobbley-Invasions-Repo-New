@@ -19,7 +19,7 @@ public class GuardArrestState : GuardBaseState
             
         }
         PlayerGrab(guard);
-
+        
         int index = Random.Range(0, guard.guardArrestWaypoints.Length);
         selectedWaypoint = guard.guardArrestWaypoints[index];
 
@@ -76,21 +76,29 @@ public class GuardArrestState : GuardBaseState
         guard.playerHips.GetComponent<FixedJoint>().connectedBody = guard.gameObject.transform.parent.GetComponent<Rigidbody>();
         guard.playerHips.GetComponent<FixedJoint>().breakForce = 5500;
         guard.StartCoroutine(BreakforceIncreaseRoutine(guard));
+        BreakForceReduce(guard);
     }
     IEnumerator BreakforceIncreaseRoutine(GuardStateManager guard)
     {
-        if (guard.playerHips.GetComponent<FixedJoint>() != null)
+        while (guard.playerHips.GetComponent<FixedJoint>().breakForce <= maxBreakForce)
         {
-            while (guard.playerHips.GetComponent<FixedJoint>().breakForce <= maxBreakForce)
+            Debug.Log("Entered breakforceincreas routine");
+            yield return new WaitForSeconds(5);
+
+            if (guard.playerHips.GetComponent<FixedJoint>() != null)
             {
-                Debug.Log("Entered breakforceincreas routine");
-                yield return new WaitForSeconds(1);
-
                 guard.playerHips.GetComponent<FixedJoint>().breakForce += 50;
-
             }
         }
-       
+
+    }
+    void BreakForceReduce(GuardStateManager guard)
+    {
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            Debug.Log("Breakforce reduced");
+            guard.playerHips.GetComponent<FixedJoint>().breakForce -= 50;
+        }
     }
             
 }
