@@ -32,9 +32,9 @@ public class GuardStunState : GuardBaseState
         //Break player grab
         GameObject.FindObjectOfType<Item>().Release();
         yield return new WaitForSeconds(1);
-        guard.GetComponent<Rigidbody>().AddRelativeForce(guard.transform.forward * -5000);
+        //guard.GetComponent<Rigidbody>().AddRelativeForce(guard.transform.forward * -5000);
         
-        yield return new WaitForSeconds(0.45f);
+       //yield return new WaitForSeconds(0.45f);
 
         for (int a = 0; a < guard.bodyParts.Length; a++)
         {

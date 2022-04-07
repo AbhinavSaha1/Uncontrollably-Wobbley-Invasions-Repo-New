@@ -7,31 +7,36 @@ public class GuardArrestState : GuardBaseState
 {
     Transform selectedWaypoint;
     float maxBreakForce = 8000;
-    float breakForce;
+    FixedJoint _fixedJoint;
     Transform currentWaypoint;
     Vector3 distance;
     public override void EnterState(GuardStateManager guard)
     {
         Debug.Log("Arresting the player");
-        //breakForce = guard.playerHips.GetComponent<FixedJoint>().breakForce;
+        _fixedJoint = guard.playerHips.GetComponent<FixedJoint>();
         if (guard.canGrab)
         {
             
         }
         PlayerGrab(guard);
         
-        int index = Random.Range(0, guard.guardArrestWaypoints.Length);
-        selectedWaypoint = guard.guardArrestWaypoints[index];
+        /*int index = Random.Range(0, guard.guardArrestWaypoints.Length);
+        selectedWaypoint = guard.guardArrestWaypoints[index];*/
 
-        /* selectedWaypoint =
+        float minDist = float.MaxValue;
+        //selectedWaypoint =
          for(int i= 0; i <guard.guardArrestWaypoints.Length; i++)
          {
+             
              currentWaypoint = guard.guardArrestWaypoints[i];
-             if(Vector3.Distance(currentWaypoint.position, guard.transform.position) < )
-             {
+             float dist = Vector3.Distance(currentWaypoint.position, guard.transform.position);
 
+             if (dist < minDist)
+             {
+                selectedWaypoint = currentWaypoint;
+                minDist = dist;
              }
-         }*/
+         }
 
     }
 
@@ -56,7 +61,8 @@ public class GuardArrestState : GuardBaseState
 
             //guard.StartCoroutine(SwitchStateDelay(guard));
         }
-        
+        BreakForceReduce(guard);
+
         /*if (Vector3.Distance(guard.target.position, guard.transform.position) > guard.activationRadius && !guard.isWaiting)
         {
             guard.isWaiting = true;
@@ -73,23 +79,18 @@ public class GuardArrestState : GuardBaseState
     void PlayerGrab(GuardStateManager guard)
     {
         guard.canGrab = false;
-        guard.playerHips.AddComponent<FixedJoint>();
-        guard.playerHips.GetComponent<FixedJoint>().connectedBody = guard.gameObject.transform.parent.GetComponent<Rigidbody>();
-        guard.playerHips.GetComponent<FixedJoint>().breakForce = 4000;
+        _fixedJoint= guard.playerHips.AddComponent<FixedJoint>();
+        _fixedJoint.connectedBody = guard.gameObject.transform.parent.GetComponent<Rigidbody>();
+        _fixedJoint.breakForce = 4000;
         guard.StartCoroutine(BreakforceIncreaseRoutine(guard));
-        BreakForceReduce(guard);
     }
     IEnumerator BreakforceIncreaseRoutine(GuardStateManager guard)
     {
-        while (guard.playerHips.GetComponent<FixedJoint>().breakForce <= maxBreakForce)
+        while ((_fixedJoint!= null) && _fixedJoint.breakForce <= maxBreakForce)
         {
             Debug.Log("Entered breakforceincreas routine");
+            _fixedJoint.breakForce += 50;
             yield return new WaitForSeconds(5);
-
-            if (guard.playerHips.GetComponent<FixedJoint>() != null)
-            {
-                guard.playerHips.GetComponent<FixedJoint>().breakForce += 50;
-            }
         }
 
     }
@@ -98,7 +99,7 @@ public class GuardArrestState : GuardBaseState
         if(Input.GetKeyDown(KeyCode.Z))
         {
             Debug.Log("Breakforce reduced");
-            guard.playerHips.GetComponent<FixedJoint>().breakForce -= 50;
+            _fixedJoint.breakForce -= 50;
         }
     }
             

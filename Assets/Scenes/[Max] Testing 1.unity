@@ -316,7 +316,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2452
+  m_Name: pb_Mesh-2460
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2464,7 +2464,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2440
+  m_Name: pb_Mesh-2448
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5913,6 +5913,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529428601667629534, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428601667629534, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -5938,6 +5943,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529428601736574491, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428601736574491, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -5953,6 +5963,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529428601780269114, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428601780269114, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -5965,6 +5980,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -0.02827909
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428601807709225, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_Drag
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3529428601807709225, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -6013,6 +6033,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529428601808395101, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428601808395101, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -6025,6 +6050,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428601819249950, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_Drag
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3529428601819249950, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -6063,6 +6093,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529428602047053545, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602047053545, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -6075,6 +6110,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602434587098, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_Drag
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3529428602434587098, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -6108,6 +6148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529428602492919499, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602492919499, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -6125,6 +6170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602650826834, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_Drag
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3529428602650826834, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -6211,6 +6261,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Item
       objectReference: {fileID: 0}
+    - target: {fileID: 3529428602917361578, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602917361578, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602917361578, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602917361578, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3529428602917361579, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
       propertyPath: m_TagString
@@ -6218,8 +6288,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529428602917361580, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602917361580, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602917361581, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602917361581, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602917361581, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3529428602917361581, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -6235,6 +6325,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -6.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602917361581, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428602951439208, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_Drag
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3529428602951439208, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -6260,6 +6360,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428603075338504, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_Drag
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3529428603075338504, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -6298,6 +6403,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529428603153833934, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428603153833934, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -6328,6 +6438,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529428603421569967, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428603421569967, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -6345,6 +6460,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.35600072
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529428603505990491, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_Drag
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3529428603505990491, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
@@ -6381,6 +6501,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4087473564935639492, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
+      propertyPath: m_Radius
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4087473564935639493, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
       propertyPath: playerHips
@@ -6398,12 +6523,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4365036350616816230, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
         type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365036350616816230, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4087473564935639493, guid: cc60528f62e8bc245ad8a2d8ca3a4aab, type: 3}
-    - {fileID: 4087473564935639492, guid: cc60528f62e8bc245ad8a2d8ca3a4aab, type: 3}
     - {fileID: 3805869886038033840, guid: cc60528f62e8bc245ad8a2d8ca3a4aab, type: 3}
     - {fileID: 3805869886038033845, guid: cc60528f62e8bc245ad8a2d8ca3a4aab, type: 3}
     - {fileID: 3805869886038033833, guid: cc60528f62e8bc245ad8a2d8ca3a4aab, type: 3}
@@ -6482,9 +6611,28 @@ MonoBehaviour:
   - {fileID: 1231888203}
   - {fileID: 1846340484}
   - {fileID: 443720573}
+  - {fileID: 3805869886342192191}
   pitchGuardActivator: {fileID: 1199806566}
   jointBreakCheck: {fileID: 0}
   playerHips: {fileID: 52026713}
+--- !u!54 &3805869886342192191 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4365036350616816230, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+    type: 3}
+  m_PrefabInstance: {fileID: 3805869886342192187}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3805869886342192193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3805869886342192188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8eaf0da78d881b4985576f05871287f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5416534513636753136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7263382434825142713, guid: 9e9273197a0406e4183abbfe5c77f4fd,
