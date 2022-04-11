@@ -8,6 +8,7 @@ public class GuardStateManager : MonoBehaviour
     public NavMeshAgent navAgent;
     public Transform target;
     public Transform guardPos;
+    public GameObject GOguard;
     public float activationRadius = 5;
     public float waypointThrowActivationRadius = 1;
     public float changeStateDelay;

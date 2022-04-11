@@ -7,6 +7,8 @@ public class GuardIdleState : GuardBaseState
     public override void EnterState(GuardStateManager guard)
     {
         Debug.Log("Hello from the Idle state");
+        guard.GOguard.GetComponent<GuardReset>().ResetChildren();
+
         guard.navAgent.enabled = true;
         guard.navAgent.isStopped = true;
     }

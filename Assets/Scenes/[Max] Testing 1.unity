@@ -3737,6 +3737,24 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 3805869886342192187}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1381282250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3529428602769590174, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+    type: 3}
+  m_PrefabInstance: {fileID: 3805869886342192187}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1381282251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381282250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8007f45272d2d33479f6d670a0f0cc51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1423535900
 GameObject:
   m_ObjectHideFlags: 0
@@ -6566,6 +6584,7 @@ MonoBehaviour:
   navAgent: {fileID: 1631151884}
   target: {fileID: 367107261}
   guardPos: {fileID: 342072001}
+  GOguard: {fileID: 1381282250}
   activationRadius: 1.5
   waypointThrowActivationRadius: 1
   changeStateDelay: 1
