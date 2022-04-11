@@ -668,6 +668,12 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 3805869886342192187}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &342072001 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3529428602769590161, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
+    type: 3}
+  m_PrefabInstance: {fileID: 3805869886342192187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &358373704
 GameObject:
   m_ObjectHideFlags: 0
@@ -6537,6 +6543,7 @@ PrefabInstance:
     - {fileID: 3805869886038033845, guid: cc60528f62e8bc245ad8a2d8ca3a4aab, type: 3}
     - {fileID: 3805869886038033833, guid: cc60528f62e8bc245ad8a2d8ca3a4aab, type: 3}
     - {fileID: 3805869886038033832, guid: cc60528f62e8bc245ad8a2d8ca3a4aab, type: 3}
+    - {fileID: 4365036350616816230, guid: cc60528f62e8bc245ad8a2d8ca3a4aab, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc60528f62e8bc245ad8a2d8ca3a4aab, type: 3}
 --- !u!1 &3805869886342192188 stripped
 GameObject:
@@ -6558,6 +6565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navAgent: {fileID: 1631151884}
   target: {fileID: 367107261}
+  guardPos: {fileID: 342072001}
   activationRadius: 1.5
   waypointThrowActivationRadius: 1
   changeStateDelay: 1
@@ -6611,16 +6619,9 @@ MonoBehaviour:
   - {fileID: 1231888203}
   - {fileID: 1846340484}
   - {fileID: 443720573}
-  - {fileID: 3805869886342192191}
   pitchGuardActivator: {fileID: 1199806566}
   jointBreakCheck: {fileID: 0}
   playerHips: {fileID: 52026713}
---- !u!54 &3805869886342192191 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 4365036350616816230, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
-    type: 3}
-  m_PrefabInstance: {fileID: 3805869886342192187}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3805869886342192193
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GuardStunState : GuardBaseState
 {
@@ -41,7 +42,22 @@ public class GuardStunState : GuardBaseState
             guard.bodyParts[a].isKinematic = true;
         }
 
-        //yield return new WaitForSeconds(2);
+        //yield return new WaitForSeconds(1);
+        
+        Debug.Log("Placing the guard on navmesh");
+        var position = guard.guardPos.position;
+        NavMesh.SamplePosition(position, out NavMeshHit navhit, 10.0f, 1);
+        position = navhit.position; // usually this barely changes, if at all
+        guard.navAgent.Warp(position);
+
+        /*if(!guard.navAgent.isOnNavMesh)
+        {
+            Debug.Log("Placing the guard on navmesh");
+            var position = guard.guardPos.position;
+            NavMesh.SamplePosition(position, out NavMeshHit navhit, 10.0f, 1);
+            position = navhit.position; // usually this barely changes, if at all
+            guard.navAgent.Warp(position);
+        }*/
 
         guard.SwitchState(guard.IdleState);
     }
