@@ -49,6 +49,7 @@ public class GuardArrestState : GuardBaseState
             {
                 guard.DestroyCall(guard.playerHips.GetComponent<FixedJoint>());
                 guard.AddForceCall(guard.playerHips);
+                guard.playerArrested = false;
                 guard.SwitchState(guard.IdleState);
             }
         }
@@ -56,6 +57,7 @@ public class GuardArrestState : GuardBaseState
         {
             guard.jointBreakCheck.hasJointBroken = false;
             guard.isWaiting = true;
+            guard.playerArrested = false;
             //PUT THE GUARD IN THE STUN STATE HERE
             guard.SwitchState(guard.StunState);
 
@@ -78,6 +80,11 @@ public class GuardArrestState : GuardBaseState
     }
     void PlayerGrab(GuardStateManager guard)
     {
+        guard.playerArrested = true;
+        for (int i = 0; i < guard.footballers.Length; i++)
+        {
+            guard.footballers[i].SwitchState(guard.footballers[i].PanicState);
+        }
         guard.canGrab = false;
         _fixedJoint= guard.playerHips.AddComponent<FixedJoint>();
         _fixedJoint.connectedBody = guard.gameObject.transform.parent.GetComponent<Rigidbody>();

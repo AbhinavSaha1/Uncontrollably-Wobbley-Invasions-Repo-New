@@ -16,6 +16,8 @@ public class GuardStateManager : MonoBehaviour
     public float guardArrestToChaseStageDelay;
     public bool canGrab;
     public bool isWaiting;
+    public bool playerArrested = false;
+    public FootballerStateManager[] footballers;
     //public Item[] grabables;
     public Transform[] guardArrestWaypoints;
     public Rigidbody[] bodyParts;

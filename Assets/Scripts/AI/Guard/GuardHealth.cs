@@ -33,7 +33,7 @@ public class GuardHealth : MonoBehaviour
         if (other.CompareTag("Item"))
         {
             Rigidbody item = other.GetComponent<Rigidbody>();
-            Debug.Log("Something has entered the guard trigger :" + other.gameObject.name + item.velocity);
+            Debug.Log("Something has entered the guard trigger :" + other.gameObject.name + item.velocity.magnitude);
             TakeDamage(50);
         }
     }

@@ -5890,7 +5890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640877673}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.749, y: -7.9, z: 15.3}
+  m_LocalPosition: {x: 2.34, y: -7.9, z: 15.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7743,6 +7743,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 5416534514733795507}
+    - target: {fileID: 1869641929, guid: bf2d20696a6385d4d9f95e91efdb2fb3, type: 3}
+      propertyPath: jumpForce
+      value: 4000
+      objectReference: {fileID: 0}
     - target: {fileID: 1869641931, guid: bf2d20696a6385d4d9f95e91efdb2fb3, type: 3}
       propertyPath: targetLimb
       value: 
@@ -8724,6 +8728,10 @@ MonoBehaviour:
   guardArrestToChaseStageDelay: 1
   canGrab: 0
   isWaiting: 0
+  playerArrested: 0
+  footballers:
+  - {fileID: 1998633424}
+  - {fileID: 545045866}
   guardArrestWaypoints:
   - {fileID: 876676683}
   - {fileID: 780228098}
