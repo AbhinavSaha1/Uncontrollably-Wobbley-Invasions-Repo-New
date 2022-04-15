@@ -6,6 +6,9 @@ public class GuardTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Something has entered the guard trigger");
+        if(other.CompareTag("Item"))
+        {
+            Debug.Log("Something has entered the guard trigger :" + other.gameObject.name);
+        }
     }
 }

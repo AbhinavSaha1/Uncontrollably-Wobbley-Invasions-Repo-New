@@ -81,7 +81,7 @@ public class GuardArrestState : GuardBaseState
         guard.canGrab = false;
         _fixedJoint= guard.playerHips.AddComponent<FixedJoint>();
         _fixedJoint.connectedBody = guard.gameObject.transform.parent.GetComponent<Rigidbody>();
-        _fixedJoint.breakForce = 4000;
+        _fixedJoint.breakForce = guard.jointBreakForce;
         guard.StartCoroutine(BreakforceIncreaseRoutine(guard));
     }
     IEnumerator BreakforceIncreaseRoutine(GuardStateManager guard)
@@ -96,7 +96,7 @@ public class GuardArrestState : GuardBaseState
     }
     void BreakForceReduce(GuardStateManager guard)
     {
-        if(Input.GetKeyDown(KeyCode.Z))
+        if(Input.GetKeyDown(KeyCode.Z) && !GameObject.FindObjectOfType<PlayerHealth>().playerStunned)
         {
             Debug.Log("Breakforce reduced");
             _fixedJoint.breakForce -= 50;

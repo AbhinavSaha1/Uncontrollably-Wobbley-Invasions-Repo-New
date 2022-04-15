@@ -16,6 +16,12 @@ public class FootballerChaseState : FootballerBaseState
         if (Vector3.Distance(footballer.playerTarget.position, footballer.transform.position) < footballer.punchRadius)
         {
             Debug.Log("Changing state from Chase -> Attack");
+
+            if(GameObject.FindObjectOfType<PlayerHealth>().playerStunned)
+            {
+                footballer.SwitchState(footballer.IdleState);
+            }
+            else 
             footballer.SwitchState(footballer.AttackState);
         }
     }
