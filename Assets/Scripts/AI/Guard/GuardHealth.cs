@@ -7,6 +7,8 @@ public class GuardHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     GuardStateManager guard;
+    public bool canDamage;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -30,11 +32,18 @@ public class GuardHealth : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Item"))
+        if (other.CompareTag("Item") && canDamage)
         {
             Rigidbody item = other.GetComponent<Rigidbody>();
-            Debug.Log("Something has entered the guard trigger :" + other.gameObject.name + item.velocity.magnitude);
-            TakeDamage(50);
+            Debug.Log("Something has entered the guard trigger :" + other.gameObject.name + "  " + item.velocity.magnitude);
+            if(item.velocity.magnitude >= 10 && item.velocity.magnitude <= 12)
+            {
+                TakeDamage(15);
+            }
+            if(item.velocity.magnitude >= 12)
+            {
+                TakeDamage(30);
+            }
         }
     }
 }

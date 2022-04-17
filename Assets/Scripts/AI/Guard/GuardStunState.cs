@@ -9,6 +9,7 @@ public class GuardStunState : GuardBaseState
     {
         Debug.Log("Entered Stun state");
         guard.StartCoroutine(StunRoutine(guard));
+        
     }
 
     public override void UpdateState(GuardStateManager guard)
@@ -23,7 +24,9 @@ public class GuardStunState : GuardBaseState
     IEnumerator StunRoutine(GuardStateManager guard)
     {
         guard.navAgent.enabled = false;
-    
+        GuardHealth guardHealth = GameObject.FindObjectOfType<GuardHealth>();
+        guardHealth.canDamage = false;
+
         for (int a = 0; a < guard.bodyParts.Length; a++)
         {
             guard.bodyParts[a].isKinematic = false;
@@ -33,22 +36,16 @@ public class GuardStunState : GuardBaseState
         //Break player grab
         GameObject.FindObjectOfType<Item>().Release();
         yield return new WaitForSeconds(1);
-        //guard.GetComponent<Rigidbody>().AddRelativeForce(guard.transform.forward * -5000);
-        
-       //yield return new WaitForSeconds(0.45f);
 
         for (int a = 0; a < guard.bodyParts.Length; a++)
         {
             guard.bodyParts[a].isKinematic = true;
         }
+        guardHealth.canDamage = true;
 
         //yield return new WaitForSeconds(1);
-        
-        Debug.Log("Placing the guard on navmesh");
-        var position = guard.guardPos.position;
-        NavMesh.SamplePosition(position, out NavMeshHit navhit, 10.0f, 1);
-        position = navhit.position; // usually this barely changes, if at all
-        guard.navAgent.Warp(position);
+
+       // PlaceGuardOnNavmesh(guard);
 
         /*if(!guard.navAgent.isOnNavMesh)
         {
@@ -62,4 +59,12 @@ public class GuardStunState : GuardBaseState
         guard.SwitchState(guard.IdleState);
     }
 
+    private void PlaceGuardOnNavmesh(GuardStateManager guard)
+    {
+        Debug.Log("Placing the guard on navmesh");
+        var position = guard.guardPos.position;
+        NavMesh.SamplePosition(position, out NavMeshHit navhit, 10.0f, 1);
+        position = navhit.position; // usually this barely changes, if at all
+        guard.navAgent.Warp(position);
+    }
 }
