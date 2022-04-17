@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class FootballerStateManager : MonoBehaviour
 {
     public NavMeshAgent navAgent;
+    public Animator animator;
     //public float chaseRadius;
     public float punchRadius;
     public float changeStateDelay;

@@ -7,6 +7,7 @@ public class FootballerChaseState : FootballerBaseState
     public override void EnterState(FootballerStateManager footballer)
     {
         Debug.Log("Footballer entered chase state");
+        //footballer.animator.SetBool("Punch", false);
     }
 
     public override void UpdateState(FootballerStateManager footballer)

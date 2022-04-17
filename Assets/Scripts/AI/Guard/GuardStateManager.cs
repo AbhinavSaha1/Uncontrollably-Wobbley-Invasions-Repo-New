@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class GuardStateManager : MonoBehaviour
 {
     public NavMeshAgent navAgent;
+    public Animator animator;
     public Transform target;
     public Transform guardPos;
     public float jointBreakForce;

@@ -45,7 +45,7 @@ public class GuardStunState : GuardBaseState
 
         //yield return new WaitForSeconds(1);
 
-       // PlaceGuardOnNavmesh(guard);
+        // PlaceGuardOnNavmesh(guard);
 
         /*if(!guard.navAgent.isOnNavMesh)
         {
@@ -55,7 +55,6 @@ public class GuardStunState : GuardBaseState
             position = navhit.position; // usually this barely changes, if at all
             guard.navAgent.Warp(position);
         }*/
-
         guard.SwitchState(guard.IdleState);
     }
 

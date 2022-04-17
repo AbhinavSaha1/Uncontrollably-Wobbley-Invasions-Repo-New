@@ -7,6 +7,11 @@ public class FootballerAttackState : FootballerBaseState
     public override void EnterState(FootballerStateManager footballer)
     {
         Debug.Log("Footballer entered Attack state");
+        if(footballer.animator != null)
+        {
+            footballer.animator.SetBool("Punch", true);
+        }
+       
         //if puncher {Punch()}
         //if grabber {Grab()}
     }
@@ -16,6 +21,11 @@ public class FootballerAttackState : FootballerBaseState
         if (Vector3.Distance(footballer.playerTarget.position, footballer.transform.position) > footballer.punchRadius)
         {
             Debug.Log("Changing state from Chase -> Attack");
+            if (footballer.animator != null)
+            {
+                footballer.animator.SetBool("Punch", false);
+            }  
+
             footballer.SwitchState(footballer.ChaseState);
         }
     }
