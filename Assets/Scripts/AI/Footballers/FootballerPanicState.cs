@@ -10,10 +10,13 @@ public class FootballerPanicState : FootballerBaseState
     public override void EnterState(FootballerStateManager footballer)
     {
         Debug.Log("Footballer entered panic state");
-        //footballer.animator.SetBool("Punch", false);
+        footballer.animator.SetBool("Punch", false);
         
         footballer.navAgent.isStopped = false;
-      
+        if(!footballer.navAgent.enabled)
+        {
+            footballer.navAgent.enabled = true;
+        }
         
        
         int index = Random.Range(0, footballer.wavePoints.Length);

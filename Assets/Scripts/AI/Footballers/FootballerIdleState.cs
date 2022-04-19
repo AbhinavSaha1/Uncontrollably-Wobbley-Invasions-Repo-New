@@ -7,6 +7,8 @@ public class FootballerIdleState : FootballerBaseState
     public override void EnterState(FootballerStateManager footballer)
     {
         Debug.Log("Footballer in Idle state");
+        footballer.footballerReset.ResetChildren();
+        footballer.navAgent.enabled = true;
         footballer.navAgent.isStopped = true;
         //stop nav mesh
     }
@@ -16,7 +18,12 @@ public class FootballerIdleState : FootballerBaseState
         //check condition for going into the next state
         if (footballer.pitchGuardActivator.isInActivationZone)
         {
-            footballer.SwitchState(footballer.WaitingState);
+            if (footballer.testStun)
+            {
+                footballer.SwitchState(footballer.StunState);
+            }
+            else
+                footballer.SwitchState(footballer.WaitingState);
             //footballer.navAgent.isStopped = false;
         }
     }

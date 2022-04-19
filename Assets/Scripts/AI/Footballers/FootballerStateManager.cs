@@ -6,12 +6,16 @@ using UnityEngine.AI;
 public class FootballerStateManager : MonoBehaviour
 {
     public NavMeshAgent navAgent;
+    public bool testStun;
+    public GuardReset footballerReset;
+    //public FootballerHealth footballerHealth;
     public Animator animator;
     //public float chaseRadius;
     public float punchRadius;
     public float changeStateDelay;
     public PitchGuardActivator pitchGuardActivator;
     public Transform playerTarget;
+    public Rigidbody[] bodyParts;
     public Transform[] wavePoints;
 
     public FootballerBaseState currentState;
@@ -20,6 +24,7 @@ public class FootballerStateManager : MonoBehaviour
     public FootballerBaseState PanicState = new FootballerPanicState();
     public FootballerBaseState ChaseState = new FootballerChaseState();
     public FootballerBaseState AttackState = new FootballerAttackState();
+    public FootballerBaseState StunState = new FootballerStunState();
 
     void Start()
     {

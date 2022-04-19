@@ -12894,8 +12894,6 @@ MonoBehaviour:
   isWaiting: 0
   playerArrested: 0
   footballers:
-  - {fileID: 1998633424}
-  - {fileID: 545045866}
   - {fileID: 4817526067341773084}
   guardArrestWaypoints:
   - {fileID: 876676683}
