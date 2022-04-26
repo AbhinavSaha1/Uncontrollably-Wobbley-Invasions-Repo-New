@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class GuardReset : MonoBehaviour
 {
-    private GameObject[] partsArray;
+    public GameObject[] partsArray;
     private Vector3[] positionsArray;
     private Quaternion[] rotationsArray;
     private Transform coreTransform;
-    public Transform hips;
+    public Transform parentTransform;
 
     // Start is called before the first frame update
     void Start()
     {
-        partsArray = new GameObject[transform.childCount];
+        /*partsArray = new GameObject[transform.childCount];
         positionsArray = new Vector3[transform.childCount];
         rotationsArray = new Quaternion[transform.childCount];
 
-        int indexCount = 0;
-        foreach (Transform child in transform)
+        int indexCount = 0;*/
+
+        /*foreach (Transform child in transform)
         {
             //child is your child transform
             Debug.Log("Child: " + child.gameObject.name);
@@ -26,6 +27,14 @@ public class GuardReset : MonoBehaviour
             positionsArray[indexCount] = child.localPosition;
             rotationsArray[indexCount] = child.localRotation;
             indexCount++;
+        }*/
+
+        positionsArray = new Vector3[partsArray.Length];
+        rotationsArray = new Quaternion[partsArray.Length];
+        for (int i= 0; i< partsArray.Length; i++)
+        {
+            positionsArray[i] = partsArray[i].transform.localPosition;
+            rotationsArray[i] = partsArray[i].transform.localRotation;
         }
 
         /*for(int indexCounter = 0; indexCounter<partsArray.Length; indexCounter++)
@@ -37,7 +46,7 @@ public class GuardReset : MonoBehaviour
             }
         }*/
 
-        coreTransform = hips;
+        coreTransform = parentTransform;
     }
 
     // Update is called once per frame
@@ -60,5 +69,7 @@ public class GuardReset : MonoBehaviour
             partsArray[indexCounter].GetComponent<Rigidbody>().velocity = Vector3.zero;
 
         }
+
+
     }
 }

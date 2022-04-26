@@ -3601,7 +3601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551628e18512c7040a8953b258c26452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hips: {fileID: 1386000842}
+  partsArray: []
+  parentTransform: {fileID: 0}
 --- !u!114 &626867008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7450,13 +7451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551628e18512c7040a8953b258c26452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hips: {fileID: 0}
---- !u!4 &1386000842 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3529428602917361578, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
-    type: 3}
-  m_PrefabInstance: {fileID: 2089403862}
-  m_PrefabAsset: {fileID: 0}
+  partsArray: []
+  parentTransform: {fileID: 0}
 --- !u!54 &1386000843 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 3529428602917361580, guid: cc60528f62e8bc245ad8a2d8ca3a4aab,
@@ -9860,7 +9856,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551628e18512c7040a8953b258c26452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hips: {fileID: 0}
+  partsArray: []
+  parentTransform: {fileID: 0}
 --- !u!95 &1921839864
 Animator:
   serializedVersion: 3
@@ -13835,7 +13832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551628e18512c7040a8953b258c26452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hips: {fileID: 0}
+  partsArray: []
+  parentTransform: {fileID: 0}
 --- !u!33 &3704528425401111105
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17433,7 +17431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navAgent: {fileID: 5375566771051945795}
-  testStun: 1
+  testStun: 0
   footballerReset: {fileID: 5671157406941758690}
   animator: {fileID: 5671157406941758689}
   punchRadius: 1.5
@@ -20164,7 +20162,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551628e18512c7040a8953b258c26452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hips: {fileID: 5671157407087563988}
+  partsArray:
+  - {fileID: 5671157407087563989}
+  - {fileID: 4817526067341773083}
+  - {fileID: 5671157407681239096}
+  - {fileID: 5671157407262170291}
+  - {fileID: 5671157405777998499}
+  - {fileID: 5671157407061874665}
+  - {fileID: 5671157406605642407}
+  - {fileID: 5671157407530758356}
+  - {fileID: 5671157405914568742}
+  - {fileID: 5671157405951390535}
+  - {fileID: 5671157406221450602}
+  - {fileID: 5671157406825093935}
+  - {fileID: 5671157405843797368}
+  - {fileID: 5671157405914998570}
+  - {fileID: 5671157405928636003}
+  - {fileID: 5671157406596865416}
+  - {fileID: 5671157407180464713}
+  parentTransform: {fileID: 5671157406941758703}
 --- !u!114 &5671157406941758691
 MonoBehaviour:
   m_ObjectHideFlags: 0
