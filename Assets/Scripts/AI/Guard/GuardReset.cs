@@ -66,7 +66,11 @@ public class GuardReset : MonoBehaviour
             Debug.Log("In reset children loop");
             partsArray[indexCounter].transform.localPosition = positionsArray[indexCounter];
             partsArray[indexCounter].transform.localRotation = rotationsArray[indexCounter];
-            partsArray[indexCounter].GetComponent<Rigidbody>().velocity = Vector3.zero;
+            if (partsArray[indexCounter].GetComponent<Rigidbody>() != null)
+            {
+                partsArray[indexCounter].GetComponent<Rigidbody>().velocity = Vector3.zero;
+            }
+            
 
         }
 
