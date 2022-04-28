@@ -9,6 +9,7 @@ public class GuardReset : MonoBehaviour
     private Quaternion[] rotationsArray;
     private Transform coreTransform;
     public Transform parentTransform;
+    public bool hasStarted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,7 @@ public class GuardReset : MonoBehaviour
         }*/
 
         coreTransform = parentTransform;
+        hasStarted = true;
     }
 
     // Update is called once per frame
@@ -57,22 +59,26 @@ public class GuardReset : MonoBehaviour
 
     public void ResetChildren()
     {
-        Debug.Log("Reset childer called");
-        gameObject.transform.position = coreTransform.position;
-        gameObject.transform.rotation = coreTransform.rotation;
-
-        for(int indexCounter = 0; indexCounter<partsArray.Length; indexCounter++)
+        if(hasStarted)
         {
-            Debug.Log("In reset children loop");
-            partsArray[indexCounter].transform.localPosition = positionsArray[indexCounter];
-            partsArray[indexCounter].transform.localRotation = rotationsArray[indexCounter];
-            if (partsArray[indexCounter].GetComponent<Rigidbody>() != null)
-            {
-                partsArray[indexCounter].GetComponent<Rigidbody>().velocity = Vector3.zero;
-            }
-            
+            Debug.Log("Reset childer called");
+            gameObject.transform.position = coreTransform.position;
+            gameObject.transform.rotation = coreTransform.rotation;
 
+            for (int indexCounter = 0; indexCounter < partsArray.Length; indexCounter++)
+            {
+                Debug.Log("In reset children loop");
+                partsArray[indexCounter].transform.localPosition = positionsArray[indexCounter];
+                partsArray[indexCounter].transform.localRotation = rotationsArray[indexCounter];
+                if (partsArray[indexCounter].GetComponent<Rigidbody>() != null)
+                {
+                    partsArray[indexCounter].GetComponent<Rigidbody>().velocity = Vector3.zero;
+                }
+
+
+            }
         }
+       
 
 
     }

@@ -26,13 +26,13 @@ public class FootballerHealth : MonoBehaviour
         {
             Debug.Log("Guard Dead: Changing to stun state");
             footballer.SwitchState(footballer.StunState);
-            currentHealth = 100;
+            currentHealth = maxHealth;
         }
 
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Item"))
+        if (other.CompareTag("Item") && canDamage)
         {
             Rigidbody item = other.GetComponent<Rigidbody>();
             Debug.Log("Something has entered the footballer trigger :" + other.gameObject.name + "  " + item.velocity.magnitude);

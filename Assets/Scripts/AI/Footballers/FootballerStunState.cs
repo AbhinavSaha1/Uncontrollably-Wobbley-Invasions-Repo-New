@@ -29,6 +29,7 @@ public class FootballerStunState : FootballerBaseState
         footballer.navAgent.enabled = false;
         //FootballerHealth footballerHealth = GameObject.FindObjectOfType<FootballerHealth>();
         //footballer.footballerHealth.canDamage = false;
+        footballer.health.canDamage = false;
 
         for (int a = 0; a < footballer.bodyParts.Length; a++)
         {
@@ -46,6 +47,7 @@ public class FootballerStunState : FootballerBaseState
         }
         //footballerHealth.canDamage = true;
         footballer.testStun = false;
+        footballer.health.canDamage = true;
         footballer.SwitchState(footballer.IdleState);
     }
    

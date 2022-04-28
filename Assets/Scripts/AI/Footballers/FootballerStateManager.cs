@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class FootballerStateManager : MonoBehaviour
 {
     public NavMeshAgent navAgent;
+    public FootballerHealth health;
     public bool testStun;
     public GuardReset footballerReset;
     //public FootballerHealth footballerHealth;

@@ -49,11 +49,7 @@ public class GuardStunState : GuardBaseState
 
         /*if(!guard.navAgent.isOnNavMesh)
         {
-            Debug.Log("Placing the guard on navmesh");
-            var position = guard.guardPos.position;
-            NavMesh.SamplePosition(position, out NavMeshHit navhit, 10.0f, 1);
-            position = navhit.position; // usually this barely changes, if at all
-            guard.navAgent.Warp(position);
+            PlaceGuardOnNavMesh()
         }*/
         guard.SwitchState(guard.IdleState);
     }
