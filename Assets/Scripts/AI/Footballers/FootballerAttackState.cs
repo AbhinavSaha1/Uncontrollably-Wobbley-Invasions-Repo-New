@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FootballerAttackState : FootballerBaseState
 {
+    //This is a comment we are using to test rebasing
     public override void EnterState(FootballerStateManager footballer)
     {
         Debug.Log("Footballer entered Attack state");
