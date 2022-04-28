@@ -26,7 +26,7 @@ public class GuardHealth : MonoBehaviour
         {
             Debug.Log("Guard Dead: Changing to stun state");
             guard.SwitchState(guard.StunState);
-            currentHealth = 100;
+            currentHealth = maxHealth;
         }
 
     }

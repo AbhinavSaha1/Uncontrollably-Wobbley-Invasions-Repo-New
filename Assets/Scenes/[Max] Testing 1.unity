@@ -5757,6 +5757,7 @@ GameObject:
   - component: {fileID: 651081094}
   - component: {fileID: 651081093}
   - component: {fileID: 651081097}
+  - component: {fileID: 651081098}
   m_Layer: 8
   m_Name: Guard new
   m_TagString: Untagged
@@ -5820,7 +5821,7 @@ Animator:
   m_GameObject: {fileID: 651081092}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b5e73c76816590b4087664200f7b2956, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5879,9 +5880,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6edbca52295f34f9e2ae801d499a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 2
   currentHealth: 0
-  canDamage: 0
+  canDamage: 1
+--- !u!135 &651081098
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651081092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 6.47
+  m_Center: {x: 0, y: 7.7026687, z: 0}
 --- !u!1 &651363007
 GameObject:
   m_ObjectHideFlags: 0
@@ -14235,7 +14249,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1922745889}
-  - component: {fileID: 1922745891}
   - component: {fileID: 1922745890}
   m_Layer: 30
   m_Name: 'AI '
@@ -14348,19 +14361,6 @@ MonoBehaviour:
   pitchGuardActivator: {fileID: 1199806566}
   jointBreakCheck: {fileID: 0}
   playerHips: {fileID: 52026713}
---- !u!135 &1922745891
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1922745888}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.08
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1923359430
 GameObject:
   m_ObjectHideFlags: 0
