@@ -13,6 +13,8 @@ public class GuardArrestState : GuardBaseState
     public override void EnterState(GuardStateManager guard)
     {
         Debug.Log("Arresting the player");
+        guard.animator.SetBool("Grab", true);
+
         _fixedJoint = guard.playerHips.GetComponent<FixedJoint>();
         if (guard.canGrab)
         {
@@ -45,11 +47,16 @@ public class GuardArrestState : GuardBaseState
         if(selectedWaypoint != null)
         {
             guard.navAgent.SetDestination(selectedWaypoint.position);
+            /*if(Vector3.Distance(selectedWaypoint.position, guard.transform.position) < (guard.waypointThrowActivationRadius -1))
+            {
+                guard.animator.SetBool("Push", true);
+            }*/
             if (Vector3.Distance(selectedWaypoint.position, guard.transform.position) < guard.waypointThrowActivationRadius)
             {
                 guard.DestroyCall(guard.playerHips.GetComponent<FixedJoint>());
                 guard.AddForceCall(guard.playerHips);
                 guard.playerArrested = false;
+                guard.animator.SetBool("Push", true);
                 guard.SwitchState(guard.IdleState);
             }
         }
@@ -101,6 +108,7 @@ public class GuardArrestState : GuardBaseState
         }
 
     }
+    
     void BreakForceReduce(GuardStateManager guard)
     {
         if(Input.GetKeyDown(KeyCode.Z) && !GameObject.FindObjectOfType<PlayerHealth>().playerStunned)

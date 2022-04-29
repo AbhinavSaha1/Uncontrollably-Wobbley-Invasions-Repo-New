@@ -8,6 +8,10 @@ public class FootballerIdleState : FootballerBaseState
     {
         Debug.Log("Footballer in Idle state");
         footballer.footballerReset.ResetChildren();
+        if(!footballer.animator.enabled)
+        {
+            footballer.animator.enabled = true;
+        }
         footballer.navAgent.enabled = true;
         footballer.navAgent.isStopped = true;
         //footballer.animator.SetBool("Idle")

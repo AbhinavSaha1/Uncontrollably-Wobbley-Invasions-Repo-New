@@ -24,6 +24,7 @@ public class GuardStunState : GuardBaseState
     IEnumerator StunRoutine(GuardStateManager guard)
     {
         guard.navAgent.enabled = false;
+        guard.animator.enabled = false;
         GuardHealth guardHealth = GameObject.FindObjectOfType<GuardHealth>();
         guardHealth.canDamage = false;
 
@@ -42,6 +43,7 @@ public class GuardStunState : GuardBaseState
             guard.bodyParts[a].isKinematic = true;
         }
         guardHealth.canDamage = true;
+        guard.animator.enabled = true;
 
         //yield return new WaitForSeconds(1);
 

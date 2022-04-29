@@ -8,6 +8,13 @@ public class GuardIdleState : GuardBaseState
     {
         Debug.Log("Hello from the Idle state");
         guard.GOguard.GetComponent<GuardReset>().ResetChildren();
+        if(!guard.animator.enabled)
+        {
+            guard.animator.enabled = true;
+        }
+        guard.animator.SetBool("Running", false);
+        guard.animator.SetBool("Push", false);
+        guard.animator.SetBool("Grab", false);
 
         guard.navAgent.enabled = true;
         guard.navAgent.isStopped = true;

@@ -27,6 +27,7 @@ public class FootballerStunState : FootballerBaseState
     IEnumerator FootballerStunRoutine(FootballerStateManager footballer)
     {
         footballer.navAgent.enabled = false;
+        footballer.animator.enabled = false;
         //FootballerHealth footballerHealth = GameObject.FindObjectOfType<FootballerHealth>();
         //footballer.footballerHealth.canDamage = false;
         footballer.health.canDamage = false;
@@ -48,6 +49,7 @@ public class FootballerStunState : FootballerBaseState
         //footballerHealth.canDamage = true;
         footballer.testStun = false;
         footballer.health.canDamage = true;
+        footballer.animator.enabled = true;
         footballer.SwitchState(footballer.IdleState);
     }
    

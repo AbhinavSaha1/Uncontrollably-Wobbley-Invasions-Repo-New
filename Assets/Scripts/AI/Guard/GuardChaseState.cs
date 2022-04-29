@@ -10,6 +10,9 @@ public class GuardChaseState : GuardBaseState
         Debug.Log("You are now in chase state");
         guard.navAgent.isStopped = false;
         guard.canGrab = true;
+        guard.animator.SetBool("Running", true);
+        guard.animator.SetBool("Push", false);
+        guard.animator.SetBool("Grab", false);
     }
 
     public override void UpdateState(GuardStateManager guard)
