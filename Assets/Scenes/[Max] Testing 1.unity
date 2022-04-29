@@ -21786,6 +21786,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guard new
       objectReference: {fileID: 0}
+    - target: {fileID: 6635799679454312732, guid: a7cb9e4aa72beb24bb9af1e1dcb45e5b,
+        type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6635799679454312733, guid: a7cb9e4aa72beb24bb9af1e1dcb45e5b,
         type: 3}
       propertyPath: m_RootOrder
@@ -21854,7 +21859,7 @@ PrefabInstance:
     - target: {fileID: 6635799680734333623, guid: a7cb9e4aa72beb24bb9af1e1dcb45e5b,
         type: 3}
       propertyPath: jointBreakForce
-      value: 4000
+      value: 4500
       objectReference: {fileID: 0}
     - target: {fileID: 6635799680734333623, guid: a7cb9e4aa72beb24bb9af1e1dcb45e5b,
         type: 3}

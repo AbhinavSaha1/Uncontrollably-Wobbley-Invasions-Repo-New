@@ -47,16 +47,16 @@ public class GuardArrestState : GuardBaseState
         if(selectedWaypoint != null)
         {
             guard.navAgent.SetDestination(selectedWaypoint.position);
-            /*if(Vector3.Distance(selectedWaypoint.position, guard.transform.position) < (guard.waypointThrowActivationRadius -1))
+            if(Vector3.Distance(selectedWaypoint.position, guard.transform.position) < 3)
             {
                 guard.animator.SetBool("Push", true);
-            }*/
+            }
             if (Vector3.Distance(selectedWaypoint.position, guard.transform.position) < guard.waypointThrowActivationRadius)
             {
                 guard.DestroyCall(guard.playerHips.GetComponent<FixedJoint>());
                 guard.AddForceCall(guard.playerHips);
                 guard.playerArrested = false;
-                guard.animator.SetBool("Push", true);
+                guard.animator.SetBool("Grab", false);
                 guard.SwitchState(guard.IdleState);
             }
         }
