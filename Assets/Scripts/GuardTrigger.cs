@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GuardTrigger : MonoBehaviour
 {
-    //test3
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Item"))

@@ -11,6 +11,7 @@ public class FootballerPanicState : FootballerBaseState
     {
         Debug.Log("Footballer entered panic state");
         //footballer.animator.SetBool("Punch", false);
+        footballer.animator.SetBool("Running", true);
         
         footballer.navAgent.isStopped = false;
 

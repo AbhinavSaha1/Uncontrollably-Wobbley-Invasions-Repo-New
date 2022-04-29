@@ -10,6 +10,7 @@ public class FootballerIdleState : FootballerBaseState
         footballer.footballerReset.ResetChildren();
         footballer.navAgent.enabled = true;
         footballer.navAgent.isStopped = true;
+        //footballer.animator.SetBool("Idle")
         //stop nav mesh
     }
 

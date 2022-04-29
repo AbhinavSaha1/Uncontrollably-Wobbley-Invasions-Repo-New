@@ -9,7 +9,7 @@ public class FootballerAttackState : FootballerBaseState
         Debug.Log("Footballer entered Attack state");
         if(footballer.animator != null)
         {
-            footballer.animator.SetBool("Punch", true);
+            footballer.animator.SetBool("Slap", true);
         }
        
         //if puncher {Punch()}
@@ -23,7 +23,7 @@ public class FootballerAttackState : FootballerBaseState
             Debug.Log("Changing state from Chase -> Attack");
             if (footballer.animator != null)
             {
-                footballer.animator.SetBool("Punch", false);
+                footballer.animator.SetBool("Slap", false);
             }  
 
             footballer.SwitchState(footballer.ChaseState);
