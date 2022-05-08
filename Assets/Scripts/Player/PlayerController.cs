@@ -50,48 +50,48 @@ public class PlayerController : MonoBehaviour
 				).normalized * this.speed
 			);
 		}
-		//if (Input.GetKey(KeyCode.W))
-		//{
-		//	this.animator.SetBool("isRunning", true);
-		//	this.hips.AddForce(this.hips.transform.forward * this.speed);
-		//}
-		//else
-		//{
-		//	this.animator.SetBool("isRunning", false);
-		//}
+        //if (Input.GetKey(KeyCode.W))
+        //{
+        //    this.animator.SetBool("isRunning", true);
+        //    this.hips.AddForce(this.hips.transform.forward * this.speed);
+        //}
+        //else
+        //{
+        //    this.animator.SetBool("isRunning", false);
+        //}
 
-		//if (Input.GetKey(KeyCode.A))
-		//{
-		//	this.animator.SetBool("isSlideLeft", true);
-		//	this.hips.AddForce(-this.hips.transform.right * this.speed);
-		//}
-		//else
-		//{
-		//	this.animator.SetBool("isSlideLeft", false);
-		//}
+        //if (Input.GetKey(KeyCode.A))
+        //{
+        //    this.animator.SetBool("isSlideLeft", true);
+        //    this.hips.AddForce(-this.hips.transform.right * this.speed);
+        //}
+        //else
+        //{
+        //    this.animator.SetBool("isSlideLeft", false);
+        //}
 
-		//if (Input.GetKey(KeyCode.S))
-		//{
-		//	this.animator.SetBool("isRunning", true);
-		//	this.hips.AddForce(-this.hips.transform.forward * this.speed);
-		//}
-		//else if (!Input.GetKey(KeyCode.W))
-		//{
-		//	this.animator.SetBool("isRunning", false);
-		//}
+        //if (Input.GetKey(KeyCode.S))
+        //{
+        //    this.animator.SetBool("isRunning", true);
+        //    this.hips.AddForce(-this.hips.transform.forward * this.speed);
+        //}
+        //else if (!Input.GetKey(KeyCode.W))
+        //{
+        //    this.animator.SetBool("isRunning", false);
+        //}
 
-		//if (Input.GetKey(KeyCode.D))
-		//{
-		//	this.animator.SetBool("isSlideRight", true);
-		//	this.hips.AddForce(this.hips.transform.right * this.speed);
-		//}
-		//else
-		//{
-		//	this.animator.SetBool("isSlideRight", false);
-		//}
+        //if (Input.GetKey(KeyCode.D))
+        //{
+        //    this.animator.SetBool("isSlideRight", true);
+        //    this.hips.AddForce(this.hips.transform.right * this.speed);
+        //}
+        //else
+        //{
+        //    this.animator.SetBool("isSlideRight", false);
+        //}
 
 
-	}
+    }
 
 	private Vector2 _moveMainDirection;
 
