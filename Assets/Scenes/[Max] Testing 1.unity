@@ -1835,12 +1835,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59ea4cbe4d86c40438d8d8c464706b3d, type: 3}
---- !u!4 &184353374 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6635799679454312733, guid: a7cb9e4aa72beb24bb9af1e1dcb45e5b,
-    type: 3}
-  m_PrefabInstance: {fileID: 6635799679886478485}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &204331828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 243e6500ffab0d24b8a70cb1c02f4518,
@@ -7155,6 +7149,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643466539}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &651081096 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6635799679454312733, guid: a7cb9e4aa72beb24bb9af1e1dcb45e5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6635799679886478485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &651363007
 GameObject:
   m_ObjectHideFlags: 0
@@ -17890,7 +17890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1268cc7c33479845832d7e3655cd7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForce: 12
+  maxForce: 24
   minForce: 1
   CurrentVal: 1
   slider: {fileID: 1478695091}
@@ -20555,7 +20555,7 @@ RectTransform:
   m_LocalScale: {x: 0.07509673, y: 0.07509673, z: 0.07509673}
   m_Children:
   - {fileID: 1478695090}
-  m_Father: {fileID: 184353374}
+  m_Father: {fileID: 651081096}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -31024,6 +31024,8 @@ MonoBehaviour:
   - {fileID: 300095078060326195}
   pitchGuardActivator: {fileID: 1199806566}
   jointBreakCheck: {fileID: 0}
+  forceBar: {fileID: 0}
+  forceBarFill: {fileID: 0}
   playerHips: {fileID: 52026713}
 --- !u!114 &3805869886342192192
 MonoBehaviour:
@@ -31397,6 +31399,8 @@ MonoBehaviour:
   - {fileID: 3704528424502060264}
   pitchGuardActivator: {fileID: 1199806566}
   jointBreakCheck: {fileID: 0}
+  forceBar: {fileID: 0}
+  forceBarFill: {fileID: 0}
   playerHips: {fileID: 52026713}
 --- !u!4 &4540073777979854730
 Transform:
@@ -36109,13 +36113,23 @@ PrefabInstance:
       objectReference: {fileID: 367107261}
     - target: {fileID: 6635799680734333623, guid: a7cb9e4aa72beb24bb9af1e1dcb45e5b,
         type: 3}
+      propertyPath: forceBar
+      value: 
+      objectReference: {fileID: 1042823902}
+    - target: {fileID: 6635799680734333623, guid: a7cb9e4aa72beb24bb9af1e1dcb45e5b,
+        type: 3}
       propertyPath: playerHips
       value: 
       objectReference: {fileID: 52026713}
     - target: {fileID: 6635799680734333623, guid: a7cb9e4aa72beb24bb9af1e1dcb45e5b,
         type: 3}
+      propertyPath: forceBarFill
+      value: 
+      objectReference: {fileID: 640856864}
+    - target: {fileID: 6635799680734333623, guid: a7cb9e4aa72beb24bb9af1e1dcb45e5b,
+        type: 3}
       propertyPath: jointBreakForce
-      value: 4350
+      value: 4300
       objectReference: {fileID: 0}
     - target: {fileID: 6635799680734333623, guid: a7cb9e4aa72beb24bb9af1e1dcb45e5b,
         type: 3}

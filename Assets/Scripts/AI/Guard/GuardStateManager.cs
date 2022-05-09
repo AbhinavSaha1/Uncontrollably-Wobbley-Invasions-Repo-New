@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class GuardStateManager : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class GuardStateManager : MonoBehaviour
     public Rigidbody[] bodyParts;
     public PitchGuardActivator pitchGuardActivator;
     public JointBreakCheck jointBreakCheck;
+    public Image forceBar;
+    public Image forceBarFill;
 
     public GameObject playerHips;
 

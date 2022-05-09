@@ -59,6 +59,8 @@ public class GuardArrestState : GuardBaseState
                 guard.DestroyCall(guard.playerHips.GetComponent<FixedJoint>());
                 guard.AddForceCall(guard.playerHips);
                 guard.playerArrested = false;
+                guard.forceBar.enabled = false;
+                guard.forceBarFill.enabled = false;
                 guard.animator.SetBool("Grab", false);
                 guard.SwitchState(guard.IdleState);
             }
@@ -69,6 +71,8 @@ public class GuardArrestState : GuardBaseState
             guard.isWaiting = true;
             guard.playerArrested = false;
             //PUT THE GUARD IN THE STUN STATE HERE
+            guard.forceBar.enabled = false;
+            guard.forceBarFill.enabled = false;
             guard.SwitchState(guard.StunState);
 
             //guard.StartCoroutine(SwitchStateDelay(guard));
@@ -100,6 +104,8 @@ public class GuardArrestState : GuardBaseState
         _fixedJoint.connectedBody = guard.gameObject.transform.parent.GetComponent<Rigidbody>();
         _fixedJoint.breakForce = guard.jointBreakForce;
         guard.StartCoroutine(BreakforceIncreaseRoutine(guard));
+        guard.forceBar.enabled = true;
+        guard.forceBarFill.enabled = true;
         breakForceBar.SetInitialForce();
     }
     IEnumerator BreakforceIncreaseRoutine(GuardStateManager guard)
