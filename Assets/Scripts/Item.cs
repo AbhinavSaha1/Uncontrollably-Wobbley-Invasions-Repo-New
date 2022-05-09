@@ -11,6 +11,8 @@ public class Item : MonoBehaviour
 
 	private int _defaultLayer;
 	[SerializeField] private int _breakForce;
+	[SerializeField] FireCracker _fireCracker;
+	[SerializeField] bool _isFireCracker;
 
 	public void PickUp(Rigidbody rigidbody)
 	{
@@ -31,6 +33,10 @@ public class Item : MonoBehaviour
 		Object.Destroy(this._FixedJoint);
 
 		this.gameObject.layer = this._defaultLayer;
+		if(_isFireCracker)
+        {
+			_fireCracker.shouldStartCountDown = true;
+        }
 	}
 
 	private void Awake()

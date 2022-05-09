@@ -9,6 +9,7 @@ public class FireCracker : MonoBehaviour
     public float ExplosionForce = 700f;
     float _countdown;
     bool _hasExploded;
+    public bool shouldStartCountDown = false;
     //public GameObject ExplosionEffect;
     void Start()
     {
@@ -17,12 +18,15 @@ public class FireCracker : MonoBehaviour
 
     void Update()
     {
-        _countdown -= Time.deltaTime;
-
-        if (_countdown <= 0 && !_hasExploded)
+        if(shouldStartCountDown)
         {
-            Explode();
-            _hasExploded = true;
+            _countdown -= Time.deltaTime;
+
+            if (_countdown <= 0 && !_hasExploded)
+            {
+                Explode();
+                _hasExploded = true;
+            }
         }
     }
 
@@ -35,10 +39,14 @@ public class FireCracker : MonoBehaviour
         foreach (Collider nearbyObject in collidersToStun)
         {
             FootballerStateManager footballer = nearbyObject.GetComponent<FootballerStateManager>();
-
+            GuardStateManager guard = nearbyObject.GetComponent<GuardStateManager>();
             if (footballer != null)
             {
                 footballer.SwitchState(footballer.StunState);
+            }
+            if(guard!= null)
+            {
+                guard.SwitchState(guard.StunState);
             }
         }
 

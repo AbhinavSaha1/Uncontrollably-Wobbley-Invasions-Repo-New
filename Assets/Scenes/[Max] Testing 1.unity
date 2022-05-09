@@ -155,6 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &8792869
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -744,6 +746,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!153 &93950419
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -1867,6 +1871,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &214079838
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2919,6 +2925,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &370687973
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3795,6 +3803,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &421468378
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3942,6 +3952,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &443871860
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5699,6 +5711,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!153 &559416461
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -5883,6 +5897,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &566312922
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6120,6 +6136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &585700943
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7037,7 +7055,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640856862}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -7890,6 +7908,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &686663645
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8492,6 +8512,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &782738651
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8643,6 +8665,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &850112632
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9339,8 +9363,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923973732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.98, y: -10.38, z: 27.26}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.94, y: -10.38, z: 27.26}
+  m_LocalScale: {x: 0.80114, y: 0.80114, z: 0.80114}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -9359,7 +9383,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Delay: 1
   ExplosionRadius: 5
-  ExplosionForce: 9000
+  ExplosionForce: 2000
+  shouldStartCountDown: 0
 --- !u!114 &923973738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9374,6 +9399,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 923973737}
+  _isFireCracker: 1
 --- !u!54 &923973739
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9586,6 +9613,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &935802587
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10218,6 +10247,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &993934360
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10679,7 +10710,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042823900}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -11666,6 +11697,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1091222636
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14004,6 +14037,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1211179519
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14151,6 +14186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1218924740
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15006,6 +15043,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1260671223
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16468,6 +16507,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1361042844
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17878,6 +17919,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1469793727
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18769,6 +18812,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1565920418
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18827,6 +18872,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1568728425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19078,6 +19125,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9000
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1587063620
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19196,6 +19245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1594617378
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20152,6 +20203,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9000
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!1 &1651739668
 GameObject:
   m_ObjectHideFlags: 0
@@ -20628,6 +20681,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1676137678
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20686,6 +20741,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1683811626
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20968,6 +21025,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1709588625
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22175,6 +22234,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1855463276
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22362,6 +22423,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &1899868818
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22394,6 +22457,25 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.001, y: 0.377, z: 0}
   m_TimeToStationary: 0.1
+--- !u!1 &1900230176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6635799680734333621, guid: a7cb9e4aa72beb24bb9af1e1dcb45e5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6635799679886478485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1900230179
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900230176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.14
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1904234062
 GameObject:
   m_ObjectHideFlags: 0
@@ -24005,6 +24087,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &2049664231
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24380,6 +24464,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!153 &2082629241
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -25245,6 +25331,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &2093261760
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25683,6 +25771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!54 &2141117095
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31483,6 +31573,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!4 &4022492422311034796
 Transform:
   m_ObjectHideFlags: 0
@@ -31995,6 +32087,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!114 &5375566770677401302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32009,6 +32103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!114 &5375566770677401303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32023,6 +32119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer: 7
   _breakForce: 9900
+  _fireCracker: {fileID: 0}
+  _isFireCracker: 0
 --- !u!195 &5375566771051945795
 NavMeshAgent:
   m_ObjectHideFlags: 0
