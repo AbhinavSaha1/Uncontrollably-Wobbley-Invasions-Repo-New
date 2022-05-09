@@ -10,10 +10,13 @@ public class GuardArrestState : GuardBaseState
     FixedJoint _fixedJoint;
     Transform currentWaypoint;
     Vector3 distance;
+    BreakForceBar breakForceBar;
+
     public override void EnterState(GuardStateManager guard)
     {
         Debug.Log("Arresting the player");
         guard.animator.SetBool("Grab", true);
+        breakForceBar = GameObject.FindObjectOfType<BreakForceBar>();
 
         _fixedJoint = guard.playerHips.GetComponent<FixedJoint>();
         if (guard.canGrab)
@@ -97,6 +100,7 @@ public class GuardArrestState : GuardBaseState
         _fixedJoint.connectedBody = guard.gameObject.transform.parent.GetComponent<Rigidbody>();
         _fixedJoint.breakForce = guard.jointBreakForce;
         guard.StartCoroutine(BreakforceIncreaseRoutine(guard));
+        breakForceBar.SetInitialForce();
     }
     IEnumerator BreakforceIncreaseRoutine(GuardStateManager guard)
     {
@@ -104,6 +108,8 @@ public class GuardArrestState : GuardBaseState
         {
             Debug.Log("Entered breakforceincreas routine");
             _fixedJoint.breakForce += 50;
+            breakForceBar.CurrentVal -= 1;
+            breakForceBar.SetForce(breakForceBar.CurrentVal);
             yield return new WaitForSeconds(5);
         }
 
@@ -115,6 +121,8 @@ public class GuardArrestState : GuardBaseState
         {
             Debug.Log("Breakforce reduced");
             _fixedJoint.breakForce -= 50;
+            breakForceBar.CurrentVal += 1;
+            breakForceBar.SetForce(breakForceBar.CurrentVal);
         }
     }
             

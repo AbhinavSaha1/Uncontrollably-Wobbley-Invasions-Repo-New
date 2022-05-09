@@ -38,11 +38,11 @@ public class GuardHealth : MonoBehaviour
             Debug.Log("Something has entered the guard trigger :" + other.gameObject.name + "  " + item.velocity.magnitude);
             if(item.velocity.magnitude >= 10 && item.velocity.magnitude <= 12)
             {
-                TakeDamage(15);
+                TakeDamage(30);
             }
             if(item.velocity.magnitude >= 12)
             {
-                TakeDamage(30);
+                TakeDamage(50);
             }
         }
     }
