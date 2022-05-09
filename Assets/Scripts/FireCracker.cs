@@ -10,7 +10,7 @@ public class FireCracker : MonoBehaviour
     float _countdown;
     bool _hasExploded;
     public bool shouldStartCountDown = false;
-    //public GameObject ExplosionEffect;
+    public GameObject ExplosionEffect;
     void Start()
     {
         _countdown = Delay;
@@ -32,7 +32,7 @@ public class FireCracker : MonoBehaviour
 
     private void Explode()
     {
-       // Instantiate(ExplosionEffect, transform.position, transform.rotation);
+       GameObject explosionEfx = Instantiate(ExplosionEffect, transform.position, transform.rotation);
 
         Collider[] collidersToStun = Physics.OverlapSphere(transform.position, ExplosionRadius);
 
@@ -61,5 +61,6 @@ public class FireCracker : MonoBehaviour
             }
         }
         Destroy(gameObject);
+        Destroy(explosionEfx, 3);
     }
 }
