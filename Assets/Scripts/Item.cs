@@ -33,7 +33,7 @@ public class Item : MonoBehaviour
 		Object.Destroy(this._FixedJoint);
 
 		this.gameObject.layer = this._defaultLayer;
-		if(_isFireCracker)
+		if(_isFireCracker && _fireCracker != null)
         {
 			_fireCracker.shouldStartCountDown = true;
         }
